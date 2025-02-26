@@ -23,12 +23,28 @@ export default function Resume() {
 
         {/* Professional Description Section */}
         <section className="mb-8">
-          <h2 className="text-2xl font-semibold mb-4">About Me</h2>
-          <p className="text-lg leading-relaxed">
-            I enjoy drawing and exploring creative technologies, and I aspire to
-            become a specialized front-end programmer. Briefly, I love learning
-            new frameworks and building intuitive user interfaces.
-          </p>
+          <h2 className="text-2xl font-semibold mb-4">Professional Summary</h2>
+          <article className="bg-white p-4 rounded shadow">
+            <p className="text-lg leading-relaxed mb-4">
+              Passionate and dedicated front-end developer with a strong
+              background in creating dynamic and responsive web applications.
+              Experienced in leveraging modern frameworks and libraries to build
+              user-friendly interfaces. Adept at collaborating with
+              cross-functional teams to deliver high-quality software solutions.
+            </p>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Proficient in HTML, CSS, JavaScript, and TypeScript.</li>
+              <li>Experienced with React, Next.js, and Tailwind CSS.</li>
+              <li>
+                Strong understanding of RESTful APIs and asynchronous
+                programming.
+              </li>
+              <li>Excellent problem-solving skills and attention to detail.</li>
+              <li>
+                Committed to continuous learning and professional development.
+              </li>
+            </ul>
+          </article>
         </section>
 
         {/* Education Section */}
