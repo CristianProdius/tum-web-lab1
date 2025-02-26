@@ -89,12 +89,23 @@ export default function Resume() {
         </motion.header>
         {/* Professional Description Section */}
         <motion.section className="mb-8" variants={itemVariants}>
-          <h2 className="text-2xl font-semibold mb-4">About Me</h2>
-          <p className="text-lg leading-relaxed">
-            I enjoy drawing and exploring creative technologies, and I aspire to
-            become a specialized front-end programmer. Briefly, I love learning
-            new frameworks and building intuitive user interfaces.
-          </p>
+          <h2 className="text-2xl font-semibold mb-4">Professional Summary</h2>
+          <article className="bg-white p-4 rounded shadow">
+            <p className="text-lg leading-relaxed mb-4">
+              Passionate and dedicated front-end developer with a strong background in creating dynamic and responsive web applications. Experienced in leveraging modern frameworks and libraries to build user-friendly interfaces. Adept at collaborating with cross-functional teams to deliver high-quality software solutions.
+            </p>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Proficient in HTML, CSS, JavaScript, and TypeScript.</li>
+              <li>Experienced with React, Next.js, and Tailwind CSS.</li>
+              <li>
+                Strong understanding of RESTful APIs and asynchronous programming.
+              </li>
+              <li>Excellent problem-solving skills and attention to detail.</li>
+              <li>
+                Committed to continuous learning and professional development.
+              </li>
+            </ul>
+          </article>
         </motion.section>
         {/* Education Section */}
         <motion.section className="mb-8" variants={itemVariants}>
@@ -102,8 +113,7 @@ export default function Resume() {
           <article className="bg-white p-4 rounded shadow">
             <h3 className="text-xl font-semibold mb-2">TUM</h3>
             <p className="text-lg">
-              Tehnical university FAF where everything was graded and nothing
-              mattered.
+              Tehnical university FAF where everything was graded and nothing mattered.
             </p>
           </article>
         </motion.section>
@@ -113,8 +123,7 @@ export default function Resume() {
           <article className="bg-white p-4 rounded shadow mb-4">
             <h3 className="text-xl font-semibold mb-2">Ken AI</h3>
             <p className="text-lg mb-2">
-              Description of the project, technologies used (e.g., React,
-              Node.js), and any relevant details.
+              Description of the project, technologies used (e.g., React, Node.js), and any relevant details.
             </p>
             <a
               href="https://getken.ai"
@@ -126,12 +135,9 @@ export default function Resume() {
         </motion.section>
         {/* Additional Information Section */}
         <motion.section className="mb-8" variants={itemVariants}>
-          <h2 className="text-2xl font-semibold mb-4">
-            Additional Information
-          </h2>
+          <h2 className="text-2xl font-semibold mb-4">Additional Information</h2>
           <p className="text-lg">
-            Some additional information idk I don&#39;t need a job. I am looking
-            for someone to hire though.
+            Some additional information idk I don't need a job. I am looking for someone to hire though.
           </p>
         </motion.section>
       </motion.main>
