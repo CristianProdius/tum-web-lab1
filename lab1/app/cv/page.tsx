@@ -11,16 +11,46 @@ export default function Resume() {
       <main className="bg-gray-100 text-gray-900 p-8 h-screen">
         {/* Basic Information Section */}
         <header className="text-center mb-8">
-          <h1 className="text-4xl font-bold mb-2">Cristian Prodius</h1>
-          <p className="text-lg">
-            Contact:{" "}
-            <a href="mailto:Prodius@Cristian.com" className="text-blue-500">
-              Prodius@Cristian.com
-            </a>{" "}
-            | (123) 456-7890
-          </p>
+          <div className="flex flex-col items-center">
+            <img
+              src="/image.png"
+              alt="Cristian Prodius"
+              className="w-32 h-32 rounded-full mb-4 shadow-lg"
+            />
+            <h1 className="text-4xl font-bold mb-2">Cristian Prodius</h1>
+            <p className="text-lg mb-2">Front-End Developer</p>
+            <p className="text-lg">
+              Contact:{" "}
+              <a
+                href="mailto:cristian@prodiusenterprise.com"
+                className="text-blue-500"
+              >
+                cristian@prodiusenterprise.com
+              </a>{" "}
+              | (123) 456-7890
+            </p>
+            <div className="flex space-x-4 mt-4">
+              <a
+                href="https://linkedin.com/in/cristianprodius"
+                className="text-blue-500 hover:underline"
+              >
+                LinkedIn
+              </a>
+              <a
+                href="https://github.com/cristianprodius"
+                className="text-blue-500 hover:underline"
+              >
+                GitHub
+              </a>
+              <a
+                href="https://twitter.com/cristianprodius"
+                className="text-blue-500 hover:underline"
+              >
+                Twitter
+              </a>
+            </div>
+          </div>
         </header>
-
         {/* Professional Description Section */}
         <section className="mb-8">
           <h2 className="text-2xl font-semibold mb-4">About Me</h2>
