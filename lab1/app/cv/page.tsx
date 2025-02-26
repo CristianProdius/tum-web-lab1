@@ -1,4 +1,26 @@
+"use client";
 import Head from "next/head";
+import { motion } from "framer-motion";
+import AnimatedBackground from "@/components/AnimatedBackground";
+
+const containerVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      delay: 0.2,
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+};
 
 export default function Resume() {
   return (
@@ -8,18 +30,32 @@ export default function Resume() {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Cristian Prodius - CV/Resume</title>
       </Head>
-      <main className="bg-gray-100 text-gray-900 p-8 h-screen">
+      <AnimatedBackground />
+      <motion.main
+        className="bg-gray-100 text-gray-900 p-8 h-screen relative"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+      >
         {/* Basic Information Section */}
-        <header className="text-center mb-8">
+        <motion.header className="text-center mb-8" variants={itemVariants}>
           <div className="flex flex-col items-center">
-            <img
+            <motion.img
               src="/image.png"
               alt="Cristian Prodius"
               className="w-32 h-32 rounded-full mb-4 shadow-lg"
+              whileHover={{ scale: 1.1 }}
             />
-            <h1 className="text-4xl font-bold mb-2">Cristian Prodius</h1>
-            <p className="text-lg mb-2">Front-End Developer</p>
-            <p className="text-lg">
+            <motion.h1
+              className="text-4xl font-bold mb-2"
+              variants={itemVariants}
+            >
+              Cristian Prodius
+            </motion.h1>
+            <motion.p className="text-lg mb-2" variants={itemVariants}>
+              Front-End Developer
+            </motion.p>
+            <motion.p className="text-lg" variants={itemVariants}>
               Contact:{" "}
               <a
                 href="mailto:cristian@prodiusenterprise.com"
@@ -28,8 +64,8 @@ export default function Resume() {
                 cristian@prodiusenterprise.com
               </a>{" "}
               | (123) 456-7890
-            </p>
-            <div className="flex space-x-4 mt-4">
+            </motion.p>
+            <motion.div className="flex space-x-4 mt-4" variants={itemVariants}>
               <a
                 href="https://linkedin.com/in/cristianprodius"
                 className="text-blue-500 hover:underline"
@@ -48,33 +84,31 @@ export default function Resume() {
               >
                 Twitter
               </a>
-            </div>
+            </motion.div>
           </div>
-        </header>
+        </motion.header>
         {/* Professional Description Section */}
-        <section className="mb-8">
+        <motion.section className="mb-8" variants={itemVariants}>
           <h2 className="text-2xl font-semibold mb-4">About Me</h2>
           <p className="text-lg leading-relaxed">
             I enjoy drawing and exploring creative technologies, and I aspire to
             become a specialized front-end programmer. Briefly, I love learning
             new frameworks and building intuitive user interfaces.
           </p>
-        </section>
-
+        </motion.section>
         {/* Education Section */}
-        <section className="mb-8">
+        <motion.section className="mb-8" variants={itemVariants}>
           <h2 className="text-2xl font-semibold mb-4">Education</h2>
           <article className="bg-white p-4 rounded shadow">
             <h3 className="text-xl font-semibold mb-2">TUM</h3>
             <p className="text-lg">
-              Tehnical univeristy FAF where everything was graded and nothing
+              Tehnical university FAF where everything was graded and nothing
               mattered.
             </p>
           </article>
-        </section>
-
+        </motion.section>
         {/* Projects Section */}
-        <section className="mb-8">
+        <motion.section className="mb-8" variants={itemVariants}>
           <h2 className="text-2xl font-semibold mb-4">Projects</h2>
           <article className="bg-white p-4 rounded shadow mb-4">
             <h3 className="text-xl font-semibold mb-2">Ken AI</h3>
@@ -89,19 +123,18 @@ export default function Resume() {
               View Project
             </a>
           </article>
-        </section>
-
-        {/* (Optional) Additional Sections */}
-        <section className="mb-8">
+        </motion.section>
+        {/* Additional Information Section */}
+        <motion.section className="mb-8" variants={itemVariants}>
           <h2 className="text-2xl font-semibold mb-4">
             Additional Information
           </h2>
           <p className="text-lg">
-            Some additional information idk I don't need a job. I am looking for
-            someone to hire though.
+            Some additional information idk I don&#39;t need a job. I am looking
+            for someone to hire though.
           </p>
-        </section>
-      </main>
+        </motion.section>
+      </motion.main>
     </>
   );
 }
